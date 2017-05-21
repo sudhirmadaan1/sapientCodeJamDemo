@@ -7,11 +7,14 @@ class Photo extends Component {
 		return(
 			<figure className="grid-figure">
 				<div className="grid-photo-wrap">
-					<img src={post.PosterPath} alt={post.Region} />
+					<img src={post.owner.avatar_url} alt={post.name} />
 				</div>	
 				<figcaption>
-					<p>{post.Genre}</p>
-					<p>{post.Description}</p>
+					<p>Name: {post.name}</p>
+					<p>Description: {post.description}</p>
+					<p>Language: {post.language}</p>
+					<p>Fork Count: {post.forks_count}</p>
+					<p>Watchers: {post.watchers}</p>
 				</figcaption>
 			</figure>
 		)
